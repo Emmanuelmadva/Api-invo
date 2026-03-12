@@ -14,3 +14,6 @@ app.include_router(
     prefix="/api",
     tags=["Facturation"]
 )
+@app.get("/")
+def root():
+    return {"status": "API running"}
