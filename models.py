@@ -1,7 +1,10 @@
 from sqlalchemy import Column, String, Integer, Numeric, Text, Boolean, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
-from api.database import Base
+import models
+import database
+import schemas
 from datetime import datetime
+from database import Base
 
 # ---------------- Clients ----------------
 class Client(Base):

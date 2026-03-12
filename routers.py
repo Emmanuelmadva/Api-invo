@@ -3,7 +3,9 @@ from sqlalchemy.orm import Session
 from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 from typing import List
-from api import models, schemas, database
+import models
+import database
+import schemas
 
 router = APIRouter()
 
