@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer, Numeric, Text, Boolean, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
-from .database import Base
+from api.database import Base
 from datetime import datetime
 
 # ---------------- Clients ----------------

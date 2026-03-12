@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from api import routers, models, database
+from api import routers, models, database, schemas
 
 app = FastAPI(
     title="Facturation API",
