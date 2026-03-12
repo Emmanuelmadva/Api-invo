@@ -79,3 +79,7 @@ def create_invoice(invoice: schemas.InvoiceCreate, db: Session = Depends(databas
 @router.get("/invoices", response_model=List[schemas.InvoiceResponse])
 def get_invoices(db: Session = Depends(database.get_db)):
     return db.query(models.Invoice).all()
+
+@app.get("/")
+def root():
+    return {"status": "API running"}

@@ -1,8 +1,6 @@
 from fastapi import FastAPI
-import routers
-import models
-import database
-import schemas
+import routers, models, database
+
 app = FastAPI(
     title="Facturation API",
     description="API pour la synchronisation des clients, produits et factures",
@@ -16,10 +14,3 @@ app.include_router(
     prefix="/api",
     tags=["Facturation"]
 )
-
-import os
-import uvicorn
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("main:app", host="0.0.0.0", port=port)
