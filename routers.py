@@ -80,6 +80,3 @@ def create_invoice(invoice: schemas.InvoiceCreate, db: Session = Depends(databas
 def get_invoices(db: Session = Depends(database.get_db)):
     return db.query(models.Invoice).all()
 
-@app.get("/")
-def root():
-    return {"status": "API running"}
